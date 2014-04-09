@@ -5,6 +5,21 @@ Nokia 5110 LCD library adapted for Spark Core by Paul Kourany, April 2014
 
 This code compiles on the Spark web IDE
 
+TO use hardware SPI, connect the display as follows for the demo program to run:
+
+Spark       Nokia 5110
+A5 (MOSI)     DIN
+A4 (MISO)      -
+A3 (SCK)      CLK
+A2 (SS)       CS
+D3            RST
+D2            D/C
+GND           GND
+3V3           VCC
+
+D3(RST) and D2(D/C) may be any pin but changes must be made to object creation line:
+  Adafruit_PCD8544 display = Adafruit_PCD8544(SS, D2, D3);
+
 NOTES:
 - Modified code for Spark Core compatibility
 - Added hardware and (fast) software SPI to fastSPIwrite()
