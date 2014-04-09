@@ -1,4 +1,3 @@
-
 /*********************************************************************
 This is an example sketch for our Monochrome Nokia 5110 LCD Displays
 
@@ -20,14 +19,14 @@ All text above, and the splash screen must be included in any redistribution
 #include "Adafruit_GFX.h"
 #include "Adafruit_PCD8544.h"
 
-// SOFTWARE SPI
-// pin 7 - Serial clock out (SCLK)
-// pin 6 - Serial data out (DIN)
-// pin 5 - Data/Command select (D/C)
-// pin 4 - LCD chip select (CS)
-// pin 3 - LCD reset (RST)
+// (FAST) SOFTWARE SPI
+// pin A3 - Serial clock out (SCLK) - User defined
+// pin A5 - Serial data out (DIN/MOSI) - User defined
+// pin D2 - Data/Command select (D/C) - User defined
+// pin A2 - LCD chip select (CS) - User defined
+// pin D3 - LCD reset (RST) - User defined
 // Adafruit_PCD8544(SCLK, DIN, DC, CS, RST)
-//Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);
+//Adafruit_PCD8544 display = Adafruit_PCD8544(A3, A5, D2, A2, D3);
 
 // HARDWARE SPI
 // pin A3 - Serial clock out (SCLK)
